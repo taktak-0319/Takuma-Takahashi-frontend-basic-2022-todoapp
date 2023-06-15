@@ -6,9 +6,9 @@ import FONTFAMILY from "../../../variables/font_family.js";
 import TEXT from "../../../variables/texts.js";
 import Check from "../../../assets/svg/check.svg";
 
-const Checkbox = () => {
+const Checkbox = ({ onClick }) => {
   return (
-    <CheckboxButton>
+    <CheckboxButton onClick={onClick}>
       <Img src={Check} />
     </CheckboxButton>
   );
