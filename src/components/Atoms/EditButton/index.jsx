@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
-import TEXT from "../../../variables/texts";
-import BREAKPOINT from "../../../variables/breakpoint";
-import FONTFAMILY from "../../../variables/font_family";
 import pencil from "../../../assets/svg/pencil.svg";
 
 const EditButton = ({ onClick }) => {
