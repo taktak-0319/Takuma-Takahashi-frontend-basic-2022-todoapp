@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import BREAKPOINT from "../../../variables/breakpoint.js";
 import COLOR from "../../../variables/color.js";
-import FONTFAMILY from "../../../variables/font_family.js";
-import TEXT from "../../../variables/texts.js";
 import Check from "../../../assets/svg/check.svg";
 
 const Checkbox = ({ onClick }) => {
