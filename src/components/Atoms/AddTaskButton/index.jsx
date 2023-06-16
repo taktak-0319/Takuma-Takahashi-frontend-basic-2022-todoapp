@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PLUS from "../../../assets/svg/plus.svg";
-import BREAKPOINT from "../../../variables/breakpoint.js";
 import COLOR from "../../../variables/color.js";
-import FONTFAMILY from "../../../variables/font_family.js";
 import TEXT from "../../../variables/texts.js";
 
 const AddTaskButton = ({ onClick }) => {
