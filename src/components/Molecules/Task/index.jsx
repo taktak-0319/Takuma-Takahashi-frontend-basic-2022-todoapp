@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import PLUS from "../../../assets/svg/plus.svg";
 import COLOR from "../../../variables/color.js";
 import TEXT from "../../../variables/texts.js";
 import Checkbox from "../../../components/Atoms/Checkbox";
