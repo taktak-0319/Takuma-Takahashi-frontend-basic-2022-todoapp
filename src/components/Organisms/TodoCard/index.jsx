@@ -3,6 +3,7 @@ import styled from "styled-components";
 import COLOR from "../../../variables/color.js";
 import AddTaskButton from "../../../components/Atoms/AddTaskButton";
 import Task from "../../../components/Molecules/Task";
+import BREAKPOINT from "../../../variables/breakpoint.js";
 
 const TodoCard = () => {
   const [taskList, setTaskList] = useState([]);
@@ -60,6 +61,9 @@ const StyledWrapper = styled.div`
   border-radius: 4px;
   padding: 20px;
   background-color: ${COLOR.LIGHT_BLACK};
+  @media (min-width: ${BREAKPOINT.MEDIUM}) {
+    max-width: 500px;
+  }
 `;
 
 const StyledTaskList = styled.div`
