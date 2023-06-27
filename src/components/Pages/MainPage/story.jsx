@@ -3,7 +3,7 @@ import Component from "./index";
 
 export default {
   component: Component,
-  title: "Molecules/Task",
+  title: "Pages/MainPage",
   parameters: {
     backgrounds: {
       default: "dark",
@@ -14,8 +14,4 @@ export default {
 const Template = (args) => <Component {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-  onTaskNameChange: (value) => console.log("taskname changed:", value),
-  onTaskComplete: () => console.log("task completed"),
-  taskName: "taskname",
-};
+Default.args = {};

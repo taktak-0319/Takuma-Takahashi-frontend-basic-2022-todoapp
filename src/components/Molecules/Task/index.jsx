@@ -7,7 +7,7 @@ import EditButton from "../../../components/Atoms/EditButton";
 import Input from "../../../components/Atoms/Input";
 
 const Task = ({
-  onTaskChange,
+  onTaskNameChange,
   onTaskComplete,
   taskName = "",
   defaultIsEditing = false,
@@ -15,7 +15,7 @@ const Task = ({
   const [isEditing, setIsEditing] = useState(defaultIsEditing);
   const onEditComplete = (value) => {
     setIsEditing(false);
-    onTaskChange(value);
+    onTaskNameChange(value);
   };
   const onEditButtonClick = () => {
     setIsEditing(true);
@@ -47,8 +47,9 @@ const StyledWrapper = styled.div`
   align-items: center;
   color: ${COLOR.LIGHT_GRAY};
   height: 24px;
-  width: 256px;
+  width: 100%;
   padding: 2px 6px 2px 6px;
+  margin-top: 10px;
   gap: 10px;
 `;
 
@@ -59,13 +60,13 @@ const StyledCheckboxWrapper = styled.div`
 
 const StyledInputWrapper = styled.div`
   height: 20px;
-  width: 214px;
+  width: 100%;
 `;
 
 const StyledNameAndButtonWrapper = styled.div`
   display: flex;
   align-items: center;
-  width: 214px;
+  width: 100%;
   height: 20px;
   gap: 10px;
 `;
