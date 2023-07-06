@@ -4,8 +4,10 @@ import COLOR from "../../../variables/color.js";
 import AddTaskButton from "../../../components/Atoms/AddTaskButton";
 import Task from "../../../components/Molecules/Task";
 import BREAKPOINT from "../../../variables/breakpoint.js";
+import { useAlertHandlerContext } from "../../../contexts/alert_handler.jsx";
 
 const TodoCard = () => {
+  const AlertHandlerContext = useAlertHandlerContext();
   const [taskList, setTaskList] = useState(() => {
     const data = localStorage.getItem("tasks");
     return data ? JSON.parse(data) : [];
@@ -28,7 +30,8 @@ const TodoCard = () => {
       const changedtask = [...taskList];
       changedtask.splice(index, 1);
       value === ""
-        ? setTaskList(changedtask)
+        ? (setTaskList(changedtask),
+          AlertHandlerContext.setAlert("タスクの名前が設定されていません"))
         : setTaskList(
             taskList.map((task, removeindex, taskList) => {
               return removeindex === index
