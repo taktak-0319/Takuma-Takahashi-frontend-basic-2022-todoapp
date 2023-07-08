@@ -18,12 +18,12 @@ const StyledAlert = styled.div`
   border-radius: 4px;
   max-width: 400px;
   padding: 10px 20px;
-  top: 40px;
   transform: translate(-50%, 0);
   transition: all 0.5s ease;
+  top: ${(props) => (props.visible ? "40px" : "0px")};
   opacity: ${(props) => (props.visible ? 1 : 0)};
   ${TEXT.S}
   @media (min-width: ${BREAKPOINT.MEDIUM}) {
-    top: 80px;
+    top: ${(props) => (props.visible ? "80px" : "0px")};
   } ;
 `;
