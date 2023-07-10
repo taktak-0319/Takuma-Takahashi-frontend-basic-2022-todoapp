@@ -18,8 +18,8 @@ export const AlertHandlerProvider = ({ children }) => {
 
   const contextValue = {
     ...alertState,
-    setAlert: setAlert,
-    closeAlert: closeAlert,
+    setAlert,
+    closeAlert,
   };
 
   return (

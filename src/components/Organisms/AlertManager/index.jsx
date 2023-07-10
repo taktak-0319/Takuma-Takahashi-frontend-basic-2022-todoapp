@@ -3,18 +3,18 @@ import Alert from "../../Atoms/Alert";
 import React, { useEffect } from "react";
 
 const AlertManager = () => {
-  const AlertHandlerContext = useAlertHandlerContext();
+  const alertHandlerContext = useAlertHandlerContext();
   useEffect(() => {
-    if (AlertHandlerContext.visible === true) {
+    if (alertHandlerContext.visible === true) {
       setTimeout(() => {
-        AlertHandlerContext.closeAlert();
+        alertHandlerContext.closeAlert();
       }, 5000);
     }
-  }, [AlertHandlerContext]);
+  }, [alertHandlerContext]);
   return (
     <Alert
-      alertMessage={AlertHandlerContext.alertMessage}
-      visible={AlertHandlerContext.visible}
+      alertMessage={alertHandlerContext.alertMessage}
+      visible={alertHandlerContext.visible}
     />
   );
 };

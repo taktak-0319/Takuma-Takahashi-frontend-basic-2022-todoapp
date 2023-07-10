@@ -18,11 +18,11 @@ export const Default = Template.bind({});
 Default.args = {};
 Default.decorators = [
   (Story) => (
-    <div>
+    <>
       <AlertHandlerProvider>
         <AlertManager />
         <Story />
       </AlertHandlerProvider>
-    </div>
+    </>
   ),
 ];

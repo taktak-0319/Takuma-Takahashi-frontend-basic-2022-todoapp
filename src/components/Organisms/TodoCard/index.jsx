@@ -7,7 +7,7 @@ import BREAKPOINT from "../../../variables/breakpoint.js";
 import { useAlertHandlerContext } from "../../../contexts/alert_handler.jsx";
 
 const TodoCard = () => {
-  const AlertHandlerContext = useAlertHandlerContext();
+  const alertHandlerContext = useAlertHandlerContext();
   const [taskList, setTaskList] = useState(() => {
     const data = localStorage.getItem("tasks");
     return data ? JSON.parse(data) : [];
@@ -31,7 +31,7 @@ const TodoCard = () => {
       changedtask.splice(index, 1);
       value === ""
         ? (setTaskList(changedtask),
-          AlertHandlerContext.setAlert("タスクの名前が設定されていません"))
+          alertHandlerContext.setAlert("タスクの名前が設定されていません"))
         : setTaskList(
             taskList.map((task, removeindex, taskList) => {
               return removeindex === index
